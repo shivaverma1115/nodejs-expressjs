@@ -1,0 +1,9 @@
+meta {
+  name: List Posts
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/v1/posts?page=1&limit=10&sort=createdAt:desc&search=Welcome
+}

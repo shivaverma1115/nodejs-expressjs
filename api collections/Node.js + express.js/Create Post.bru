@@ -1,0 +1,23 @@
+meta {
+  name: Create Post
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/v1/posts
+  body: json
+}
+
+headers {
+  Content-Type: application/json
+  Authorization: Bearer {{accessToken}}
+}
+
+body:json {
+  {
+    "title": "Typed API post",
+    "content": "Created from Bruno",
+    "categoryId": 1
+  }
+}
